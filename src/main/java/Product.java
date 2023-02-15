@@ -1,4 +1,3 @@
-
 import java.time.LocalDateTime;
 
 public class Product{
@@ -6,13 +5,14 @@ public class Product{
     private double price;
     private String description;
     private LocalDateTime purchaseDate;
+    private int quantity;
 
-    public Product(String name, double price, String description) {
+    public Product(String name, double price, String description, int quantity) {
         this.name = name;
         this.price = price;
         this.description = description;
         this.purchaseDate = LocalDateTime.now();
-
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -31,6 +31,10 @@ public class Product{
         return purchaseDate;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -41,5 +45,9 @@ public class Product{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
